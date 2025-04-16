@@ -1,5 +1,4 @@
 # CLO Frontend Task 
-
 [![Vitest](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/vitest.yml/badge.svg)](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/vitest.yml)
 [![Playwright](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/playwright.yml/badge.svg)](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/playwright.yml)
 
