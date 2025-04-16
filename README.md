@@ -1,6 +1,6 @@
 # CLO Frontend Task 
 
-![Github Actions Workflow](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/dev/badge.svg)
+[![Dev-CI](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/dev.yml/badge.svg)](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/dev.yml)
 
 ## Getting Started
 프로젝트 다운로드
