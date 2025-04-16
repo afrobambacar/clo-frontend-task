@@ -52,15 +52,15 @@ function PostItem({
   ) : (
     <div data-testid="skeleton" className="border border-gray-100 animate-pulse">
       <div className="w-full h-[234px] overflow-hidden">
-        <div className="flex items-center justify-center h-234 bg-gray-100 dark:bg-gray-300" />
+        <div className="flex items-center justify-center h-234 bg-gray-200" />
       </div>
       <div className="p-4 text-center">
-        <div className="inline-block h-3 w-full my-2 rounded-full bg-gray-100 dark:bg-gray-300" />
-        <div className="inline-block h-3 w-30 my-2 rounded-full bg-gray-100 dark:bg-gray-300" />
+        <div className="inline-block h-3 w-full my-2 rounded-full bg-gray-200" />
+        <div className="inline-block h-3 w-30 my-2 rounded-full bg-gray-200" />
       </div>
       <div className="flex justify-between items-center p-4">
-        <div className="inline-block h-1.5 w-25 rounded-full bg-gray-100 dark:bg-gray-300" />
-        <div className="inline-block h-1.5 w-25 rounded-full bg-gray-100 dark:bg-gray-300" />
+        <div className="inline-block h-1.5 w-25 rounded-full bg-gray-200" />
+        <div className="inline-block h-1.5 w-25 rounded-full bg-gray-200" />
       </div>
     </div>
   )

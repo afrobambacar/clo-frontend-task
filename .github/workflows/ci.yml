@@ -1,15 +1,18 @@
-name: Dev-CI
+name: CI
 
 on:
   push:
-    branches:
+    branches: 
       - main
+      - dev
   pull_request:
-    branches:
+    branches: 
       - main
+      - dev
 
 jobs:
   test-and-build:
+    name: Test and Build
     runs-on: ubuntu-latest
 
     steps:
