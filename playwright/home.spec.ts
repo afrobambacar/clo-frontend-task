@@ -4,8 +4,26 @@ const API_URL = 'https://recruiting-api.marvelousdesigner.com/api/data'
 const DEFAULT_PAGE_SIZE = 12
 const NETWORK_DELAY = 600
 
+// Mock history state
+const mockHistoryState = {
+  sort: 'default',
+  q: '',
+}
+
+// Mock history API
+const mockHistoryAPI = {
+  replaceState: (state: { sort: string; q: string }, unused: string, url?: string) => {
+    mockHistoryState.sort = state.sort
+    mockHistoryState.q = state.q
+  },
+  state: mockHistoryState,
+}
+
 test.describe('Newsroom Application', () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      window.history.replaceState = mockHistoryAPI.replaceState
+    })
     await page.goto('/')
     await page.waitForResponse(response => {
       return response.url().includes(API_URL) && response.status() === 200
@@ -58,9 +76,12 @@ test.describe('Newsroom Application', () => {
   })
 
   test('should maintain search and sort state in History API', async ({ page }) => {
+    await page.getByRole('combobox').selectOption('desc')
     await page.getByRole('searchbox').fill('asia')
     await page.keyboard.press('Enter')
-    await page.getByRole('combobox').selectOption('desc')
+    // Verify history state is updated
+    const state = await page.evaluate(() => window.history.state)
+    expect(state).toEqual({ sort: 'desc', q: 'asia' })
     // Reload the page
     await page.reload()
     await page.waitForResponse(response => {
@@ -68,8 +89,8 @@ test.describe('Newsroom Application', () => {
     })
     await page.waitForSelector('.grid > .post-item')
     // Verify search and sort state is maintained
-    await expect(page.getByRole('searchbox')).toHaveValue('asia')
     await expect(page.getByRole('combobox')).toHaveValue('desc')
+    await expect(page.getByRole('searchbox')).toHaveValue('asia')
   })
 
   test('should handle error state gracefully', async ({ page }) => {
