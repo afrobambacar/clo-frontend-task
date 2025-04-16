@@ -49,7 +49,8 @@ function PostItem({
         <div className="flex justify-between items-center text-xs text-gray-500">
           <p className="truncate">{post.creator}</p>
           <p className="truncate">
-            <span className="view-cnt">{post.viewCnt} views</span> / <span>{handleDateFormat(post.startDt)}</span></p>
+            <span className="view-cnt">{post.viewCnt} views</span> / <span>{handleDateFormat(post.startDt)}</span>
+          </p>
         </div>
       </div>
     </div>
