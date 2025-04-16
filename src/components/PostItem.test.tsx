@@ -30,7 +30,7 @@ describe('PostItem', () => {
     expect(screen.getByText(mockPost.creator)).toBeInTheDocument()
     expect(screen.getByText(`${mockPost.viewCnt} views`)).toBeInTheDocument()
     
-    const image = screen.getByRole('thumbnail')
+    const image = screen.getByRole('img')
     expect(image).toHaveAttribute('src', `${mockPost.imgList}?w=${mockThumbnail.w}&h=${mockThumbnail.h}&f=${mockThumbnail.f}&q=${mockThumbnail.q}&fit=${mockThumbnail.fit}`)
     expect(image).toHaveAttribute('alt', mockPost.title)
   })
@@ -38,14 +38,14 @@ describe('PostItem', () => {
   it('should render loading skeleton when post is not provided', () => {
     render(<PostItem />)
     
-    expect(screen.queryByRole('thumbnail')).not.toBeInTheDocument()
+    expect(screen.queryByRole('img')).not.toBeInTheDocument()
     expect(screen.getByTestId('skeleton')).toBeInTheDocument()
   })
 
   it('should handle image load error', () => {
     render(<PostItem post={mockPost} thumbnail={mockThumbnail} />)
     
-    const image = screen.getByRole('thumbnail')
+    const image = screen.getByRole('img')
     fireEvent.error(image)
     
     expect(image).toHaveAttribute('src', 'https://placehold.co/500x234?text=404')

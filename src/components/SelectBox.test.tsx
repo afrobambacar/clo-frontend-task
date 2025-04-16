@@ -13,7 +13,7 @@ describe('SelectBox', () => {
   it('should render with default value and options', () => {
     render(<SelectBox options={mockOptions} onChange={() => {}} />)
     
-    const selectElement = screen.getByRole('selectbox')
+    const selectElement = screen.getByRole('combobox')
     expect(selectElement).toBeInTheDocument()
     expect(selectElement).toHaveValue('default')
     
@@ -26,7 +26,7 @@ describe('SelectBox', () => {
     const handleChange = vi.fn()
     render(<SelectBox options={mockOptions} onChange={handleChange} />)
     
-    const selectElement = screen.getByRole('selectbox')
+    const selectElement = screen.getByRole('combobox')
     fireEvent.change(selectElement, { target: { value: 'asc' } })
     
     expect(handleChange).toHaveBeenCalledWith('asc')
@@ -35,14 +35,14 @@ describe('SelectBox', () => {
   it('should use provided defaultValue', () => {
     render(<SelectBox options={mockOptions} onChange={() => {}} defaultValue="asc" />)
     
-    const selectElement = screen.getByRole('selectbox')
+    const selectElement = screen.getByRole('combobox')
     expect(selectElement).toHaveValue('asc')
   })
 
   it('should render with empty options array', () => {
     render(<SelectBox options={[]} onChange={() => {}} />)
     
-    const selectElement = screen.getByRole('selectbox')
+    const selectElement = screen.getByRole('combobox')
     expect(selectElement).toBeInTheDocument()
     expect(selectElement.children).toHaveLength(0)
   })

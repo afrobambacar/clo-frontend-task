@@ -20,10 +20,9 @@ export default function InfiniteScroll({ handleLoad, next, hasMore, fallback }: 
   }, [inView, loading, next, hasMore, handleLoad])
 
   if (loading) return <>{fallback}</>
-  if (!hasMore) return <div role="status" aria-label="No more items" className="m-6 text-center text-gray-500" />
+  if (!hasMore) return <div aria-label="No more items" className="m-6 text-center text-gray-500" />
   return (
     <div 
-      role="status"
       aria-label="Loading more items"
       className="m-6 text-center text-gray-500" 
       ref={viewRef}

@@ -29,10 +29,10 @@ function PostItem({
   }
 
   return post ? (
-    <div className="border border-gray-300">
+    <div className="post-item border border-gray-300">
       <div className="w-full xs:h-[234px] overflow-hidden">
         <img
-          role="thumbnail" 
+          role="img" 
           src={`${post.imgList}?w=${thumbnail.w}&h=${thumbnail.h}&f=${thumbnail.f}&q=${thumbnail.q}&fit=${thumbnail.fit}`}
           alt={post.title} 
           draggable={false}
@@ -42,14 +42,15 @@ function PostItem({
       </div>
       <div className="p-4">
         <div className="mb-4 after:mx-auto after:w-[70px] after:h-[2px] after:bg-amber-300 after:block after:content=['']">
-          <h2 role="title" className="mb-[8px] line-clamp-2 leading-relaxed h-[4rem] text-center text-xl font-semibold">
+          <h2 className="mb-[8px] line-clamp-2 leading-relaxed h-[4rem] text-center text-xl font-semibold">
             {post.title}
           </h2>
         </div>
         <div className="flex justify-between items-center text-xs text-gray-500">
-          <p role="creator" className="truncate">{post.creator}</p>
+          <p className="truncate">{post.creator}</p>
           <p className="truncate">
-            <span>{post.viewCnt} views</span> / <span>{handleDateFormat(post.startDt)}</span></p>
+            <span className="view-cnt">{post.viewCnt} views</span> / <span>{handleDateFormat(post.startDt)}</span>
+          </p>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import InfiniteScroll from '@/components/InfiniteScroll'
 import PostItem from '@/components/PostItem'
 import SelectBox from '@/components/SelectBox'
 import SearchBox from '@/components/SearchBox'
-import { PostStoreProvider, usePostStore, fetchPostItems, IPost } from '@/stores'
+import { PostStoreProvider, usePostStore, fetchPostItems, IPost, type SortOption } from '@/stores'
 
 export default function App() {
   const fetchData = fetchPostItems()
@@ -27,7 +27,7 @@ function Nav() {
   const { query, setQuery } = usePostStore(store => store)
 
   function handleSort(value: string) {
-    setQuery({ sort: value })
+    setQuery({ sort: value as SortOption })
   }
 
   function handleSearch(value: string) {

@@ -1,6 +1,6 @@
 # CLO Frontend Task 
-
-[![Test and Build](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/ci.yml/badge.svg)](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/ci.yml)
+[![Vitest](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/vitest.yml/badge.svg)](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/vitest.yml)
+[![Playwright](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/playwright.yml/badge.svg)](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/playwright.yml)
 
 ### Getting Started
 
@@ -45,6 +45,8 @@ npm run dev
 
 #### Optional
 - [x] 테스트 코드 작성 
+  - [x] 유닛 테스트: Vitest
+  - [x] E2E 테스트: Playwright
 - [x] Typescript 적용
 - [x] 인피닛스크롤 작동 시 Skeleton UI 구현 (서버 응답을 모사하기 위해 delay 적용)
 
@@ -58,13 +60,18 @@ npm run dev
 
 ### Scripts
 
-프로젝트 테스트
+프로젝트 단위 테스트
 ```
 npm test
 ```
 ```
 > vite-project@0.0.0 test
 > vitest --coverage
+```
+
+프로젝트 End-to-End 테스트
+```
+npm run test:e2e
 ```
 
 프로젝트 빌드
