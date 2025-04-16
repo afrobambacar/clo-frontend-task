@@ -1,4 +1,3 @@
-import moment from 'moment'
 import { memo } from 'react'
 import { type IPost } from '@/stores'
 
@@ -24,6 +23,11 @@ function PostItem({
     e.currentTarget.alt = 'Image not available'
   }
 
+  function handleDateFormat(date: string): string {
+    const [, MMM, DD, YYYY] = new Date(date).toString().split(' ')
+    return [MMM, DD, YYYY].join(' ')
+  }
+
   return post ? (
     <div className="border border-gray-300">
       <div className="w-full xs:h-[234px] overflow-hidden">
@@ -45,7 +49,7 @@ function PostItem({
         <div className="flex justify-between items-center text-xs text-gray-500">
           <p role="creator" className="truncate">{post.creator}</p>
           <p className="truncate">
-            <span>{post.viewCnt} views</span> / <span>{moment(post.startDt).format('MMM D YYYY')}</span></p>
+            <span>{post.viewCnt} views</span> / <span>{handleDateFormat(post.startDt)}</span></p>
         </div>
       </div>
     </div>

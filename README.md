@@ -9,18 +9,21 @@
 git clone https://github.com/afrobambacar/clo-frontend-task.git
 ```
 
-프로젝트 루트에서 패키지를 설치해주세요.
+프로젝트 폴더로 이동하세요.
 ```
-# 프로젝트 폴더로 이동
 cd clo-frontend-task
-# 패키지 설치
-yarn install // or npm install
+```
+
+프로젝트 루트에서 패키지를 `yarn` 대신 `npm install` 명령어를 실행해도 됩니다.
+```
+yarn install
 ```
 
 개발 모드 실행 후 [http://localhost:3000](http://localhost:3000)에서 확인하실 수 있습니다.
 ```
 npm run dev
-
+```
+```
   VITE v6.2.6  ready in 271 ms
 
   ➜  Local:   http://localhost:3000/
@@ -47,21 +50,19 @@ npm run dev
 
 ### Packages
 
-본 프로젝트는 요구사항 충족을 위해 최소한의 패키지를 사용했습니다. 
-
 - react
 - react-dom
-- react-error-boundary: 코드 내 에러가 발생하는 경우 캐치하여 UI를 표시합니다.
-- tailwindcss: CSS
+- react-error-boundary: 함수 실행 중 에러가 발생했을 때 UI에 표시
+- tailwindcss: CSS 유틸리티
 - zustand: 상태관리 라이브러리
-- moment
 
 ### Scripts
 
 프로젝트 테스트
 ```
 npm test
-
+```
+```
 > vite-project@0.0.0 test
 > vitest --coverage
 ```
@@ -69,7 +70,8 @@ npm test
 프로젝트 빌드
 ```
 npm run build
-
+```
+```
 > vite-project@0.0.0 build
 > tsc -b && vite build
 
@@ -84,7 +86,8 @@ dist/assets/index-BZ-T2Bx9.js   257.72 kB │ gzip: 82.12 kB
 빌드한 파일을 실행할 수 있습니다.
 ```
 npm run preview
-
+```
+```
 > vite-project@0.0.0 preview
 > vite preview
 
@@ -92,4 +95,3 @@ npm run preview
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 ```
-
