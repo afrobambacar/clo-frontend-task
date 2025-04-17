@@ -2,7 +2,7 @@
 [![Vitest](https://github.com/afrobambacar/clo-newsroom/actions/workflows/vitest.yml/badge.svg)](https://github.com/afrobambacar/clo-newsroom/actions/workflows/vitest.yml)
 [![Playwright](https://github.com/afrobambacar/clo-newsroom/actions/workflows/playwright.yml/badge.svg)](https://github.com/afrobambacar/clo-newsroom/actions/workflows/playwright.yml)
 
-![Preview](https://github.com/afrobambacar/clo-newsroom/blob/hotfix/preview.gif)
+![Preview](https://github.com/afrobambacar/clo-newsroom/blob/main/preview.gif)
 
 ### Getting Started
 
