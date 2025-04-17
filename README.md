@@ -1,17 +1,17 @@
-# CLO Frontend Task 
-[![Vitest](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/vitest.yml/badge.svg)](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/vitest.yml)
-[![Playwright](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/playwright.yml/badge.svg)](https://github.com/afrobambacar/clo-frontend-task/actions/workflows/playwright.yml)
+# CLO NEWSROOM
+[![Vitest](https://github.com/afrobambacar/clo-newsroom/actions/workflows/vitest.yml/badge.svg)](https://github.com/afrobambacar/clo-newsroom/actions/workflows/vitest.yml)
+[![Playwright](https://github.com/afrobambacar/clo-newsroom/actions/workflows/playwright.yml/badge.svg)](https://github.com/afrobambacar/clo-newsroom/actions/workflows/playwright.yml)
 
 ### Getting Started
 
 본 프로젝트를 시작하려면 아래 명령어를 터미널에서 실행하여 프로젝트를 다운로드 받아야 합니다.
 ```
-git clone https://github.com/afrobambacar/clo-frontend-task.git
+git clone https://github.com/afrobambacar/clo-newsroom.git
 ```
 
 프로젝트 폴더로 이동하세요.
 ```
-cd clo-frontend-task
+cd clo-newsroom
 ```
 
 프로젝트 루트에서 패키지를 `yarn` 대신 `npm install` 명령어를 실행해도 됩니다.
@@ -58,18 +58,23 @@ npm run dev
 - tailwindcss: CSS 유틸리티
 - zustand: 상태관리 라이브러리
 
-### Scripts
+### Additional Scripts
 
-프로젝트 단위 테스트
+프로젝트 Lint
 ```
-npm test
+npm run lint
+```
+
+프로젝트 유닛 테스트
+```
+npm run test
 ```
 ```
-> vite-project@0.0.0 test
+> clo-newsroom@0.0.1 preview
 > vitest --coverage
 ```
 
-프로젝트 End-to-End 테스트
+프로젝트 E2E 테스트
 ```
 npm run test:e2e
 ```
@@ -95,10 +100,10 @@ dist/assets/index-BZ-T2Bx9.js   257.72 kB │ gzip: 82.12 kB
 npm run preview
 ```
 ```
-> vite-project@0.0.0 preview
-> vite preview
+> clo-newsroom@0.0.1 preview
+> vite preview --port 3001
 
-  ➜  Local:   http://localhost:4173/
+  ➜  Local:   http://localhost:3001/
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 ```

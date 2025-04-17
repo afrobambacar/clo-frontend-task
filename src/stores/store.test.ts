@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { createPostStore, PostStore } from './store'
-import { type IPost } from './types'
+import { type IPost } from './api'
 import { StoreApi } from 'zustand'
 
 describe('PostStore', () => {

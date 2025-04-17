@@ -12,7 +12,7 @@ const mockHistoryState = {
 
 // Mock history API
 const mockHistoryAPI = {
-  replaceState: (state: { sort: string; q: string }, unused: string, url?: string) => {
+  replaceState: (state: { sort: string; q: string }) => {
     mockHistoryState.sort = state.sort
     mockHistoryState.q = state.q
   },

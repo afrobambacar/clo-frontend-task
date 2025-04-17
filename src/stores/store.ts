@@ -1,5 +1,5 @@
 import { createStore } from 'zustand/vanilla'
-import { type IPost } from './types'
+import { type IPost } from './api'
 
 export type SortOption = 'default' | 'asc' | 'desc'
 
