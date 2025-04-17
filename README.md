@@ -2,6 +2,8 @@
 [![Vitest](https://github.com/afrobambacar/clo-newsroom/actions/workflows/vitest.yml/badge.svg)](https://github.com/afrobambacar/clo-newsroom/actions/workflows/vitest.yml)
 [![Playwright](https://github.com/afrobambacar/clo-newsroom/actions/workflows/playwright.yml/badge.svg)](https://github.com/afrobambacar/clo-newsroom/actions/workflows/playwright.yml)
 
+![Preview](https://github.com/afrobambacar/clo-newsroom/blob/hotfix/preview.gif)
+
 ### Getting Started
 
 본 프로젝트를 시작하려면 아래 명령어를 터미널에서 실행하여 프로젝트를 다운로드 받아야 합니다.
