@@ -11,7 +11,11 @@ export default function App() {
 
   return (
     <ErrorBoundary fallback={'Something went wrong!'}>
-      <Suspense>
+      <Suspense fallback={
+        <div className="flex justify-center items-center h-screen">
+          <div className="rounded-full h-10 w-10 bg-amber-500 animate-ping"></div>
+        </div>
+      }>
         <PostStoreProvider fetchData={fetchData}>
           <div className="max-w-[1680px] mx-auto py-[80px]">
             <Nav />
