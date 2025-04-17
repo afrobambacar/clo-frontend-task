@@ -6,6 +6,7 @@ on:
     branches: [ main, dev ]
 jobs:
   test:
+    name: E2E Test with Playwright
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:

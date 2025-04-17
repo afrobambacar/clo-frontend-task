@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStore } from 'zustand'
-import { IPost } from './types'
+import { type IPost } from './api'
 import { type PostStore, createPostStore } from './store'
 
 type PostStoreApi = ReturnType<typeof createPostStore>
@@ -37,9 +37,4 @@ export const usePostStore = <T,>(selector: (store: PostStore) => T,): T => {
   }
 
   return useStore(postStoreContext, selector)
-}
-
-export const fetchPostItems = async () => {
-  const res = await fetch('https://recruiting-api.marvelousdesigner.com/api/data')
-  return res.json() 
 }
